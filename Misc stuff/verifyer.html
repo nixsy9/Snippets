@@ -1,0 +1,75 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+        <title>Verifier</title>
+        <script src="http://code.jquery.com/jquery.js"></script>
+        <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css">
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+        <script src="http://crypto-js.googlecode.com/svn/tags/3.1.2/build/rollups/md5.js"></script>
+        <script src="http://crypto-js.googlecode.com/svn/tags/3.1.2/build/rollups/sha1.js"></script>
+        <script src="http://crypto-js.googlecode.com/svn/tags/3.1.2/build/rollups/sha256.js"></script>
+        <script src="http://crypto-js.googlecode.com/svn/tags/3.1.2/build/rollups/sha512.js"></script>
+        <script src="http://crypto-js.googlecode.com/svn/tags/3.1.2/build/rollups/sha3.js"></script>
+        <script src="http://crypto-js.googlecode.com/svn/tags/3.1.2/build/rollups/ripemd160.js"></script>
+        <script src="http://crypto-js.googlecode.com/svn/tags/3.1.2/build/rollups/hmac-sha512.js"></script>
+        <script src="http://crypto-js.googlecode.com/svn/tags/3.1.2/build/components/enc-base64-min.js"></script>
+</head>
+<body>
+        <div class="jumbotron">
+                <center><h1>Verifier</h1></center>
+        </div>
+        <div class="container">
+        <div class="row">
+                <div class="col-lg-6">
+                <div class="well">
+                        <center>
+                                <h1>Just-Dice Verifier</h1>
+ 
+                                <div class="cont">
+                                    <textarea class="form-control" id="randomize" placeholder="Paste from randomize textbox"></textarea>
+                                    <br>or
+                                    <br>
+                                    <textarea class="form-control" id="ssh" placeholder="Server secret hash"></textarea>
+                                    <br>
+                                    <textarea class="form-control" id="ss" placeholder="Server secret"></textarea>
+                                    <br>
+                                    <textarea class="form-control" id="cs" placeholder="Client seed"></textarea>
+                                    <br>
+                                    <input class="form-control" id="sn" placeholder="Starting nonce (>=1)" type="number"></input>
+                                    <br>
+                                    <input class="form-control" id="nb" placeholder="Number of Bets (>=1)" type="number"></input>
+                                    <br>
+                                    <button class="btn btn-default" id="verify">Verify</button>
+                                </div>
+ 
+                                <h2>Results:</h2>
+ 
+                                <div class="cont">
+                                    <p id="results"></p>
+                                </div>
+                        </center>
+                </div><!--Well-->
+                <script src="jd.js"></script>
+                </div><!--Column-->
+
+                </div><!--Row-->
+                <div class="well">
+                        <center><h2 class="text-center">Hashbox</h1>
+                        <br>
+                        <textarea class="form-control" id="hashbox"></textarea>
+                        <br></center>
+                        <center>
+                                <button type="button" class="btn btn-default" id="md5">MD5</button>
+                                <button type="button" class="btn btn-default" id="sha1">SHA1</button>
+                                <button type="button" class="btn btn-default" id="sha256">SHA256</button>
+                                <button type="button" class="btn btn-default" id="sha512">SHA512</button>
+                                <button type="button" class="btn btn-default" id="sha3">SHA3</button>
+                                <button type="button" class="btn btn-default" id="ripemd160">RIPEMD160</button>
+                                <button type="button" class="btn btn-default" id="clear">Clear</button>
+                        </center>
+                </div><!--Well-->
+                <script src="hashbox.js"></script>
+                </div><!--Container-->
+
+</body>
+</html>
