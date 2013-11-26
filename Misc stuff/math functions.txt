@@ -1,0 +1,18 @@
+Math.abs(a)     // the absolute value of a
+Math.acos(a)    // arc cosine of a
+Math.asin(a)    // arc sine of a
+Math.atan(a)    // arc tangent of a
+Math.atan2(a,b) // arc tangent of a/b
+Math.ceil(a)    // integer closest to a and not less than a
+Math.cos(a)     // cosine of a
+Math.exp(a)     // exponent of a (Math.E to the power a)
+Math.floor(a)   // integer closest to a, not greater than a
+Math.log(a)     // log of a base e
+Math.max(a,b)   // the maximum of a and b
+Math.min(a,b)   // the minimum of a and b
+Math.pow(a,b)   // a to the power b
+Math.random()   // pseudorandom number 0 to 1 (see examples)
+Math.round(a)   // integer closest to a (see rounding examples)
+Math.sin(a)     // sine of a
+Math.sqrt(a)    // square root of a
+Math.tan(a)     // tangent of a
