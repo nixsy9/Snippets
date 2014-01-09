@@ -16,3 +16,8 @@ socket.on("chat", function(text, timestamp){
     console.log(who);
     console.log(said);
 }
+
+//parse chat
+socket.on("chat", function (txt, date) {
+  console.log(date + txt);
+});
