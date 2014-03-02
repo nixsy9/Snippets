@@ -1,0 +1,39 @@
+{
+  "manifest_version": 2,
+
+  "name": "Just-dice.com-Nix-V3",
+  "description": "Martingale and Enhancements and emotes, Oh My!",
+  "version": "1.0.0",
+
+  "permissions": [
+    "tabs","https://doge-dice.com/*","storage"
+  ],
+  "web_accessible_resources": [
+    "js/*",
+    "img/*",
+	"snd/*"
+  ],
+   "background": {
+      "persistent": false,
+      "scripts": [ "js/background.js" ]
+   },
+   "browser_action": {
+      "default_icon": "img/nix.png",
+      "default_title": "Click to go to Doge-Dice.com"
+   },
+ "icons": { "16": "img/nix.png","48": "img/nix.png","128": "img/nix.png" },
+ "content_security_policy": "script-src 'self'; object-src 'self'",
+ "content_scripts": [
+    {
+      "matches": ["https://doge-dice.com/*"],
+      "js": [
+				"js/lib/jquery.js",
+				"js/main.js","js/lib/jquery.flot.js"
+				],
+      "css": [
+				"stylesheets/bot_custom.css"
+				],
+      "run_at": "document_end"
+    }
+  ]
+}

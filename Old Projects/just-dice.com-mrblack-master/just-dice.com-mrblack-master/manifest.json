@@ -1,0 +1,21 @@
+{
+  "manifest_version": 3,
+
+  "name": "Nix's Just-dice.com mrblack sequence",
+  "description": "Provides a betting sequence for just-dice.com",
+  "version": "1.0",
+
+  "permissions": [
+    "tabs","https://just-dice.com/*","storage"
+  ],
+ "icons": { "128": "dice.jpeg" },
+ "options_page": "options.html",
+ "content_security_policy": "script-src 'self'; object-src 'self'",
+ "content_scripts": [
+    {
+      "matches": ["https://just-dice.com/*"],
+      "js": ["jquery.min.js","main.js","options.js"],
+      "run_at": "document_end"
+    }
+  ]
+}

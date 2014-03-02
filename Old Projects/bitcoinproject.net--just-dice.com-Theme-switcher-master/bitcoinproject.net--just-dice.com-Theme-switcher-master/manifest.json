@@ -1,0 +1,19 @@
+{
+  "manifest_version": 3,
+
+  "name": "Just-dice.com Themes",
+  "description": "bitcoinproject.net themes in a handy extension",
+  "version": "1.0",
+
+  "permissions": [
+    "tabs","https://just-dice.com/*","contextMenus"
+  ],
+ "content_security_policy": "script-src 'self'; object-src 'self'",
+ "content_scripts": [
+    {
+      "matches": ["https://just-dice.com/*"],
+      "js": ["jquery.min.js","main.js"],
+      "run_at": "document_end"
+    }
+  ]
+}

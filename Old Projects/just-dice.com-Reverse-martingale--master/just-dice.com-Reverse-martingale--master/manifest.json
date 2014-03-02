@@ -1,0 +1,23 @@
+{
+  "manifest_version": 2,
+
+  "name": "Nix's just-dice.com -Reverse-martingal- bot",
+  "description": "a bot that bets on the reverse martingale strategy",
+  "version": "1.0.2",
+
+  "permissions": [
+    "tabs","https://just-dice.com/*","https://doge-dice.com/*","storage"
+  ],
+  "web_accessible_resources": [
+    "img/*"
+  ],
+ "icons": { "16": "img/nix.png","48": "img/nix.png","128": "img/nix.png" },
+ "content_security_policy": "script-src 'self'; object-src 'self'",
+ "content_scripts": [
+    {
+      "matches": ["https://just-dice.com/*","https://doge-dice.com/*",],
+      "js": ["jquery-1.10.2.min.js","main.js"],
+      "run_at": "document_end"
+    }
+  ]
+}

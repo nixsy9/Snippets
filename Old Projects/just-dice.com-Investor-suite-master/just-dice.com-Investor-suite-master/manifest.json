@@ -1,0 +1,25 @@
+{
+  "manifest_version": 2,
+
+  "name": "Nix's Just-dice.com Investor suite",
+  "description": "A system to help the investors of just-dice",
+  "version": "1.0.0",
+
+  "permissions": [
+    "tabs","https://just-dice.com/*","storage"
+  ],
+  "web_accessible_resources": [
+    "js/*",
+    "img/*",
+	"snd/*"
+  ],
+ "icons": { "16": "img/nix.png","48": "img/nix.png","128": "img/nix.png" },
+ "content_security_policy": "script-src 'self'; object-src 'self'",
+ "content_scripts": [
+    {
+      "matches": ["https://just-dice.com/*"],
+      "js": ["js/lib/jquery-1.10.2.min.js","js/main.js","js/lib/jquery.flot.js"],
+      "run_at": "document_end"
+    }
+  ]
+}
